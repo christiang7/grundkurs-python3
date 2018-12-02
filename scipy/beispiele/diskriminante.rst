@@ -68,7 +68,7 @@ Die Diskriminante ist positiv, somit hat die Gleichung die zwei Lösungen
 
 Der Funktionsgraph als Ganzes kann mittels `numpy
 <https://docs.scipy.org/doc/numpy/reference/>`_ und `matplotlib
-<http://matplotlib.org/api/index.html>`_ folgendermaßen erzeugt werden:
+<https://matplotlib.org/api/index.html>`_ folgendermaßen erzeugt werden:
 
 .. code-block:: python
 

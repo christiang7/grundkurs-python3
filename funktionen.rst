@@ -98,6 +98,11 @@ aufgerufen werden:
 Hat eine Funktion sowohl "normale" als auch optionale Argumente, so müssen die
 optionalen Argumente am Ende der Funktion angegeben werden.
 
+.. _args:
+.. _kwargs:
+
+.. https://www.saltycrane.com/blog/2008/01/how-to-use-args-and-kwargs-in-python/
+
 Ebenso ist es möglich, einer Funktion eine optionale Liste oder ein optionales
 Dict für zusätzliche Argumente anzugeben. Üblicherweise lautet die Syntax
 dafür:
@@ -167,7 +172,7 @@ dabei vom Objekt-Typ ab:
       def foo(any_list):
           any_list.append(4)
 
-      foo()
+      foo(my_list)
 
       print(my_list)
       # Ergebnis: [1,2,3,4]
@@ -185,7 +190,7 @@ dabei vom Objekt-Typ ab:
       def foo(any_list):
           any_list = [1,2,3,4]
 
-      foo()
+      foo(my_list)
 
       print(my_list)
       # Ergebnis: [1,2,3]
@@ -202,7 +207,7 @@ dabei vom Objekt-Typ ab:
       def foo(any_string):
         any_string.replace('World', 'Python')
 
-      foo()
+      foo(my_string)
 
       print(my_string)
       # Ergebnis: 'Hello World!'
@@ -356,8 +361,8 @@ runde Klammern setzt, unmittelbar wie eine Funktion aufgerufen werden:
     # Ergebnis: 8
 
 Lambda-Ausdrücke werden auch häufig in Kombination mit den Builtin-Funktion
-``filter()`` und ``map()`` eingesetzt, um jeweils auf alle Elemente einer Liste
-angewendet zu werden:
+:ref:`filter() <filter()>` und :ref:`map() <map()>` eingesetzt, um jeweils auf
+alle Elemente einer Liste angewendet zu werden:
 
 .. code-block:: python
 

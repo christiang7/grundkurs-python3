@@ -1,4 +1,6 @@
 .. index:: Klasse, Attribut, Methode
+.. _Klasse:
+.. _Objektorientierung:
 .. _Klassen und Objektorientierung:
 
 Klassen und Objektorientierung
@@ -17,6 +19,8 @@ Klassennamen und einem Doppelpunkt eingeleitet. Alle darauf folgenden
 Definitionen von Eigenschaften und Funktionen, die zur Klasse gehören, werden
 um eine Tabulatorweite (üblicherweise 4 Leerzeichen) eingerückt.
 
+.. _Instanziierung:
+.. _Initialisierung:
 .. _Definition und Initialisierung eigener Klassen:
 
 Definition und Initialisierung eigener Klassen
@@ -121,6 +125,7 @@ können diese in einer optionalen Funktion ``__del__()`` innerhalb der Klasse
 festgelegt werden.
 
 .. index:: Member
+.. _Eigenschaften von Klassen:
 .. _Allgemeine Eigenschaften von Klassen:
 
 Allgemeine Eigenschaften von Klassen
@@ -193,7 +198,7 @@ definiert; dazu wird folgende Syntax verwendet:
 
         self._myattr = value
 
-    self.myattr = property(get_myattr, set_myattr)
+    myattr = property(get_myattr, set_myattr)
 
 .. todo Verwendung eines Decorators!
 
@@ -558,9 +563,9 @@ Blick erkennbar ist, aus welcher Klasse die abgeleiteten Attribute und Methoden
 ursprünglich stammen, sollte Mehrfach-Vererbung nur in Ausnahmefällen und mit
 Vorsicht eingesetzt werden.
 
-.. index:: Dekorator
-.. _Dekoratoren:
+.. .. index:: Dekorator
 .. _Dekorator:
+.. _Dekoratoren:
 
 Dekoratoren
 -----------
@@ -569,11 +574,66 @@ Dekoratoren werden in Python als Kurzschreibweise verwendet, um bestimmte,
 innerhalb einer Klasse definierte Methoden mit zusätzlichen Methoden zu
 "umhüllen".
 
-Der wohl typischste Dekorator 
+Der wohl wichtigste Dekorator ist :ref:`@property <property()>`: Mit Hilfe
+dieses Dekorators kann eine get-Methode zu einem "Attribut" gemacht werden,
+dessen Wert nicht statisch in einer Variablen abgelegt ist, sondern dynamisch
+mittels der dekorierten get-Methode abgefragt wird. Die grundlegende
+Funktionsweise ist folgende:
 
-.. _Generatoren und Iteratoren:
+
+.. code-block:: python
+
+    # Beispiel-Klasse definieren:
+    class C(object):
+
+        # Variable, die nur "intern" verwendet werden soll:
+        _counter = 0
+
+        # get-Methode, mittels derer ein Wert ausgegeben werden soll:
+        def get_counter(self):
+            return self._counter
+
+        # Markierung der get-Methode als Property
+        counter = property(get_counter)
+
+Anhand des obigen Beispiels kann man gut erkennen, dass in der Beispiel-Klasse ``C``
+neben der als nur zur internen Verwendung vorgesehenen Variablen ``_counter``
+auch noch ein zweites Attribug ``counter`` definiert wird, und zwar explizit als
+Aufruf von ``property()``. 
+
+Wird via ``c = C()`` eine neue Instanz der Klasse erzeugt, so wird mittels
+``c.counter`` die ``get_counter()``-Funktion aufgerufen. Die für einen
+Methoden-Aufruf typischen runden Klammern entfallen also, von außen hat es den
+Anschein, als würde auf ein gewöhnliches Attribut zugegriffen. Intern hingegen
+wird die ``_counter``-Variable, die womöglich an anderen Stellen innerhalb der
+Klasse verändert wird, ausgegeben.
+
+Als Kurzschreibweise für ähnliche Methoden-"Wrapper" gibt es in Python folgende
+Syntax: 
+
+.. code-block:: python
+
+    class C(object):
+
+        _counter = 0
+
+        @property
+        def get_counter(self):
+            return self._counter
+
+Die Zeile ``@property`` wird dabei "Dekorator" genannt. Diese Kurzschreibweise
+hat den gleichen Effekt wie das obige, explizite Wrapping der zugehörigen
+Methode.
+
+
+... to be continued ...
+.. TODO
+
+
+
 .. _Generator:
 .. _Iterator:
+.. _Generatoren und Iteratoren:
 
 Generatoren und Iteratoren
 --------------------------
@@ -642,5 +702,5 @@ im Speicher verbleibt, sondern entweder unmittelbar weiter verarbeitet oder
 manuell gespeichert werden muss.
 
 
-
+.. TODO Abstrakte Klassen!
 

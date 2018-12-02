@@ -3,11 +3,11 @@
 Anhang
 ======
 
-
 .. _Schlüsselwörter:
 
 Schlüsselwörter
 ---------------
+.. {{{
 
 In Python3 sind folgende Schlüsselwörter vordefiniert:
 
@@ -35,11 +35,13 @@ ist:
     iskeyword("lambda")
     # Ergebnis: True
 
+.. }}}
 
 .. _Standardfunktionen:
 
 Standardfunktionen
 ------------------
+.. {{{
 
 Die im folgenden Abschnitt beschriebenen Funktionen (`Builtin
 <https://docs.python.org/3/library/functions.html>`__-Funktionen) sind
@@ -51,6 +53,7 @@ werden muss.
 
 abs()
 ^^^^^
+.. {{{
 
 Die Funktion `abs(x) <https://docs.python.org/3/library/functions.html#abs>`__
 gibt den Absolutwert einer Zahl ``x`` als Ergebnis zurück.
@@ -65,12 +68,14 @@ gibt den Absolutwert einer Zahl ``x`` als Ergebnis zurück.
     abs( +5.7 )
     # Ergebnis: 5.7
 
-
 .. index:: all()
 .. _all():
 
+.. }}}
+
 all()
 ^^^^^
+.. {{{
 
 Die Funktion `all(sequenz)
 <https://docs.python.org/3/library/functions.html#all>`__ kann auf ein
@@ -88,11 +93,15 @@ Ergebnis wird ``True`` zurückgegeben, wenn alle Elemente den Wahrheitswert
     all( [3,7,9,5,2] )
     # Ergebnis: True
 
+
 .. index:: any()
 .. _any():
 
+.. }}}
+
 any()
 ^^^^^
+.. {{{
 
 Die Funktion `any(sequenz)
 <https://docs.python.org/3/library/functions.html#any>`__ kann auf ein
@@ -115,8 +124,11 @@ zurückgegeben.
 .. index:: ascii()
 .. _ascii():
 
+.. }}}
+
 ascii()
 ^^^^^^^
+.. {{{
 
 Die Funktion `ascii(objekt) <https://docs.python.org/3/library/functions.html#ascii>`__
 gibt ebenso wie die Funktion :ref:`repr() <repr()>` als Ergebnis eine
@@ -141,8 +153,11 @@ dass darin nicht enthaltene Symbole durch Zeichen mit vorangestelltem ``\x``,
 .. index:: bin()
 .. _bin():
 
+.. }}}
+
 bin()
 ^^^^^
+.. {{{
 
 Die Funktion `bin(x) <https://docs.python.org/3/library/functions.html#bin>`__
 gibt eine Zeichenkette mit der Binärdarstellung einer einer Integer-Zahl als
@@ -156,11 +171,15 @@ von der eigentlichen Binärzahl.
     bin(42)
     # Ergebnis: '0b101010'
 
+
 .. index:: bool()
 .. _bool():
 
+.. }}}
+
 bool()
 ^^^^^^
+.. {{{
 
 Die Funktion `bool(ausdruck)
 <https://docs.python.org/3/library/functions.html#bool>`__ gibt den
@@ -182,59 +201,14 @@ Wahrheitswert eines logischen Ausdrucks an; dieser kann entweder ``True`` oder
     # Ergebnis: True
 
 
-.. index:: bytearray()
-.. _bytearray():
-
-bytearray()
-^^^^^^^^^^^
-
-Die Funktion `bytearray(string, encoding)
-<https://docs.python.org/3/library/functions.html#bytearray>`__ erzeugt aus der
-angegebenen Zeichenkette eine neue Instanz eines ``bytearray``-Objekts; als
-Encoding kann beispielsweise ``'utf-8'`` oder ``'ascii'`` angegeben werden.
-Dieser Datentyp besteht aus ganzzahligen Werten zwischen ``0`` und ``255`` und
-ist -- ähnlich wie der Datentyp ``str`` zur Speicherung von Zeichenketten in
-Textdateien vorgesehen ist -- zur Speicherung von binären Daten gedacht.
-
-*Beispiel:*
-
-.. code-block:: python
-
-    bytearray("Hallo Welt!", 'utf-8')
-    # Ergebnis: bytearray(b'Hallo Welt!')
-
-Die für ``bytes`` und ``bytearrays`` verfügbaren Methoden entsprechen im
-Wesentlichen den jeweiligen Methoden für Zeichenketten (siehe Abschnitt `Bytes
-and Bytearray Operations
-<https://docs.python.org/3/library/stdtypes.html#bytes-and-bytearray-operations>`__
-der offiziellen Python-Dokumentation).
-
-.. index:: bytes()
-.. _bytes():
-
-bytes()
-^^^^^^^
-
-Die Funktion `bytes(string, encoding)
-<https://docs.python.org/3/library/functions.html#bytes>`__ erzeugt aus der
-angegebenen Zeichenkette eine neue Instanz eines ``bytes``-Objekts; als Encoding
-kann beispielsweise ``'utf-8'`` oder ``'ascii'`` angegeben werden. Das
-``bytes``-Objekt entspricht im Wesentlichen einem :ref:`bytearray
-<bytearray()>`-Objekt, ist aber nicht veränderlich (so wie ein :ref:`Tupel
-<Tupel>` eine unveränderliche :ref:`Liste <Liste>` darstellt).
-
-*Beispiel:*
-
-.. code-block:: python
-
-    bytes("Hallo Welt!", 'utf-8')
-    # Ergebnis: b'Hallo Welt!'
-
 .. index:: callable()
 .. _callable():
 
+.. }}}
+
 callable()
 ^^^^^^^^^^
+.. {{{
 
 Die Funktion `callable(objekt)
 <https://docs.python.org/3/library/functions.html#callable>`__ gibt in Form
@@ -255,8 +229,11 @@ eine Funktion oder Methode) aufrufbar ist oder nicht.
 .. index:: chr()
 .. _chr():
 
+.. }}}
+
 chr()
 ^^^^^
+.. {{{
 
 Die Funktion `chr(zahl)
 <https://docs.python.org/3/library/functions.html#chr>`__ gibt zu einem
@@ -280,8 +257,11 @@ Unicode-Zeichensatzes bereits aus.
 .. index:: classmethod()
 .. _classmethod():
 
+.. }}}
+
 classmethod()
 ^^^^^^^^^^^^^
+.. {{{
 
 Die Funktion `classmethod(methode)
 <https://docs.python.org/3/library/functions.html#classmethod>`__ macht die
@@ -313,8 +293,11 @@ Basis-Klasse) übergeben.
 .. index:: compile()
 .. _compile():
 
+.. }}}
+
 compile()
 ^^^^^^^^^
+.. {{{
 
 Die Funktion `compile(code, file, mode)
 <https://docs.python.org/3/library/functions.html#compile>`__ übersetzt den als
@@ -369,8 +352,11 @@ beziehungsweise :ref:`exec() <exec()>` ausgeführt werden.
 .. index:: complex()
 .. _complex():
 
+.. }}}
+
 complex()
 ^^^^^^^^^
+.. {{{
 
 Die Funktion `complex()
 <https://docs.python.org/3/library/functions.html#complex>`__ erstellt eine neue
@@ -392,8 +378,11 @@ steht; ``complex()`` löst sonst einen ``ValueError`` aus.
 .. index:: delattr()
 .. _delattr():
 
+.. }}}
+
 delattr()
 ^^^^^^^^^
+.. {{{
 
 Die Funktion `delattr(objekt, attributname)
 <https://docs.python.org/3/library/functions.html#delattr>`__ löscht ein
@@ -416,8 +405,11 @@ identisch mit ``del objekt.attributname``.
 .. index:: dict()
 .. _dict():
 
+.. }}}
+
 dict()
 ^^^^^^
+.. {{{
 
 Die Funktion `dict()
 <https://docs.python.org/3/library/functions.html#func-dict>`__ erzeugt eine
@@ -441,8 +433,11 @@ neue Instanz eines :ref:`dict <dict>`-Objekts, also ein Dictionary. Formal ist
 .. index:: dir()
 .. _dir():
 
+.. }}}
+
 dir()
 ^^^^^
+.. {{{
 
 Die Funktion `dir() <https://docs.python.org/3/library/functions.html#dir>`__
 gibt, wenn sie ohne ein angegebenes Argument aufgerufen wird, eine Liste mit den
@@ -471,8 +466,11 @@ Methoden des jeweiligen Objekts in Form einer String-Liste ausgegeben.
 .. index:: divmod()
 .. _divmod():
 
+.. }}}
+
 divmod()
 ^^^^^^^^
+.. {{{
 
 Die Funktion `divmod(zahl1, zahl2)
 <https://docs.python.org/3/library/functions.html#divmod>`__ dividiert die als
@@ -491,8 +489,11 @@ Ergebnis der Division und der zweite Wert den Divisionsrest angibt.
 .. index:: enumerate()
 .. _enumerate():
 
+.. }}}
+
 enumerate()
 ^^^^^^^^^^^
+.. {{{
 
 Die Funktion `enumerate(sequenz)
 <https://docs.python.org/3/library/functions.html#enumerate>`__ ermöglicht es,
@@ -520,8 +521,11 @@ denen beide Informationen verwendet werden.
 .. index:: eval()
 .. _eval():
 
+.. }}}
+
 eval()
 ^^^^^^
+.. {{{
 
 Die Funktion `eval(zeichenkette)
 <https://docs.python.org/3/library/functions.html#eval>`__ erstellt aus der
@@ -558,8 +562,11 @@ liefert ``eval()`` als Ergebnis stets den Wert ``None``.
 .. index:: exec()
 .. _exec():
 
+.. }}}
+
 exec()
 ^^^^^^
+.. {{{
 
 Die Funktion `exec(zeichenkette)
 <https://docs.python.org/3/library/functions.html#exec>`__ führt -- ähnlich wie
@@ -595,8 +602,11 @@ stets ``None``.
 .. index:: filter()
 .. _filter():
 
+.. }}}
+
 filter()
 ^^^^^^^^
+.. {{{
 
 Die Funktion `filter(funktionsname, objekt)
 <https://docs.python.org/3/library/functions.html#filter>`__ bietet die
@@ -626,8 +636,11 @@ Im obigen Beispiel könnte auch kürzer ``even_numbers = [x for x in my_list if 
 .. index:: float()
 .. _float():
 
+.. }}}
+
 float()
 ^^^^^^^
+.. {{{
 
 Die Funktion `float()
 <https://docs.python.org/3/library/functions.html#float>`__ gibt, sofern
@@ -652,8 +665,11 @@ Nachkommastelle ``.0`` ergänzt.
 .. index:: format()
 .. _format():
 
+.. }}}
+
 format()
 ^^^^^^^^
+.. {{{
 
 Die Funktion `format(wert, formatangabe)
 <https://docs.python.org/3/library/functions.html#format>`__ formatiert die
@@ -683,8 +699,11 @@ aufgerufen.
 .. index:: frozenset()
 .. _frozenset():
 
+.. }}}
+
 frozenset()
 ^^^^^^^^^^^
+.. {{{
 
 Die Funktion `frozenset(sequenz)
 <https://docs.python.org/3/library/functions.html#func-frozenset>`__ erzeugt aus
@@ -706,8 +725,11 @@ unveränderliche Menge.
 .. index:: getattr()
 .. _getattr():
 
+.. }}}
+
 getattr()
 ^^^^^^^^^
+.. {{{
 
 Die Funktion `getattr(objekt, attributname)
 <https://docs.python.org/3/library/functions.html#getattr>`__ gibt als Ergebnis
@@ -743,8 +765,11 @@ Wird kein Standard-Wert angegeben und das Attribut existiert nicht, so wird ein
 .. index:: globals()
 .. _globals():
 
+.. }}}
+
 globals()
 ^^^^^^^^^
+.. {{{
 
 Die Funktion `globals()
 <https://docs.python.org/3/library/functions.html#globals>`__ liefert als
@@ -765,8 +790,11 @@ Aufrufs existierenden globalen, das heißt programmweit sichtbaren Variablen.
 .. index:: hasattr()
 .. _hasattr():
 
+.. }}}
+
 hasattr()
 ^^^^^^^^^
+.. {{{
 
 Die Funktion `hasattr(objekt, attributname)
 <https://docs.python.org/3/library/functions.html#hasattr>`__ gibt als Ergebnis
@@ -802,8 +830,11 @@ Mittels der Funktion ``hasattr()`` kann somit geprüft werden, ob die Funktion
 .. index:: hash()
 .. _hash():
 
+.. }}}
+
 hash()
 ^^^^^^
+.. {{{
 
 Die Funktion `hash(unveraenderliches-objekt)
 <https://docs.python.org/3/library/functions.html#hash>`__ liefert zu beliebigen
@@ -828,8 +859,11 @@ unterschiedliche Objekte gehören.
 .. index:: help()
 .. _help():
 
+.. }}}
+
 help()
 ^^^^^^
+.. {{{
 
 Die Funktion `help(objekt)
 <https://docs.python.org/3/library/functions.html#help>`__ blendet im
@@ -850,8 +884,11 @@ Dokumentation zum angegebenen Objekt vorhanden ist.
 .. index:: hex()
 .. _hex():
 
+.. }}}
+
 hex()
 ^^^^^
+.. {{{
 
 Die Funktion `hex(int-wert)
 <https://docs.python.org/3/library/functions.html#hex>`__ gibt eine Zeichenkette
@@ -870,8 +907,11 @@ Binärzahl.
 .. index:: id()
 .. _id():
 
+.. }}}
+
 id()
 ^^^^
+.. {{{
 
 Die Funktion `id(objekt)
 <https://docs.python.org/3/library/functions.html#id>`__ liefert für beliebige
@@ -893,8 +933,11 @@ werden.
 .. index:: input()
 .. _input():
 
+.. }}}
+
 input()
 ^^^^^^^
+.. {{{
 
 Die Funktion `input() <https://docs.python.org/3/library/functions.html#input>`__
 dient zum Einlesen einer vom Benutzer eingegebenen Zeichenkette. Beim Aufruf
@@ -915,8 +958,11 @@ umgewandelt werden.
 .. index:: int()
 .. _int():
 
+.. }}}
+
 int()
 ^^^^^
+.. {{{
 
 Die Funktion `int() <https://docs.python.org/3/library/functions.html#int>`__
 gibt, sofern möglich, die zur angegebenen Zeichenkette oder Gleitkomma-Zahl
@@ -938,15 +984,22 @@ beispielsweise ergibt ``int(3.7)`` den Wert ``3``.
 .. index:: isinstance()
 .. _isinstance():
 
+.. }}}
+
 isinstance()
 ^^^^^^^^^^^^
+.. {{{
 
 Die Funktion `isinstance(objekt, klassen-name)
 <https://docs.python.org/3/library/functions.html#isinstance>`__ gibt als
 Ergebnis den Wahrheitswert ``True`` zurück, wenn das angegebene Objekt eine
 Instanz der als zweites Argument angegebenen Klasse (oder einer :ref:`Subklasse
 <Vererbung>`) ist; ist dies nicht der Fall, wird ``False`` als Ergebnis
-zurückgegeben.
+zurückgegeben. 
+
+Gibt man als zweites Argument eine Liste mit Klassennamen an, so wird geprüft,
+ob das angegebene Objekt eine Instanz *einer* der in der Liste angegebenen
+Klassen ist:
 
 *Beispiel:*
 
@@ -955,12 +1008,17 @@ zurückgegeben.
     isinstance("Hallo Welt", str)
     # Ergebnis: True
 
+    isinstance(3.14, [int, float])
+    # Ergebnis: True
 
 .. index:: issubclass()
 .. _issubclass():
 
+.. }}}
+
 issubclass()
 ^^^^^^^^^^^^
+.. {{{
 
 Die Funktion `issubclass(cls1, cls2)
 <https://docs.python.org/3/library/functions.html#issubclass>`__ gibt als
@@ -980,8 +1038,11 @@ zurückgegeben.
 .. index:: iter()
 .. _iter():
 
+.. }}}
+
 iter()
 ^^^^^^
+.. {{{
 
 Die Funktion `iter(sequenz)
 <https://docs.python.org/3/library/functions.html#iter>`__ erstellt eine neue
@@ -1038,8 +1099,11 @@ beliebig oft aufgerufen werden.
 .. index:: len()
 .. _len():
 
+.. }}}
+
 len()
 ^^^^^
+.. {{{
 
 Die Funktion `len() <https://docs.python.org/3/library/functions.html#len>`__
 gibt die Länge einer Liste oder Zeichenkette als ``int``-Wert an. Bei einer
@@ -1063,8 +1127,11 @@ Textzeichen, aus denen die Zeichenkette besteht.
 .. index:: list()
 .. _list():
 
+.. }}}
+
 list()
 ^^^^^^
+.. {{{
 
 Die Funktion `list()
 <https://docs.python.org/3/library/functions.html#func-list>`__ erzeugt eine
@@ -1091,8 +1158,11 @@ den in der Sequenz vorkommenden Einträgen gefüllt.
 .. index:: locals()
 .. _locals():
 
+.. }}}
+
 locals()
 ^^^^^^^^
+.. {{{
 
 Die Funktion `locals()
 <https://docs.python.org/3/library/functions.html#locals>`__ liefert als
@@ -1104,8 +1174,11 @@ Variablen.
 .. index:: map()
 .. _map():
 
+.. }}}
+
 map()
 ^^^^^
+.. {{{
 
 Die Funktion `map(function, object)
 <https://docs.python.org/3/library/functions.html#map>`__ wendet eine Funktion
@@ -1129,8 +1202,11 @@ könnte auch ``[abs(x) for x in my_list]`` geschrieben werden.
 .. index:: max()
 .. _max():
 
+.. }}}
+
 max()
 ^^^^^
+.. {{{
 
 Die Funktion `max() <https://docs.python.org/3/library/functions.html#max>`__
 gibt das größte Element einer Liste als Ergebnis zurück.
@@ -1146,8 +1222,11 @@ gibt das größte Element einer Liste als Ergebnis zurück.
 .. index:: min()
 .. _min():
 
+.. }}}
+
 min()
 ^^^^^
+.. {{{
 
 Die Funktion `min() <https://docs.python.org/3/library/functions.html#min>`__
 gibt das kleinste Element einer Liste als Ergebnis zurück.
@@ -1163,8 +1242,11 @@ gibt das kleinste Element einer Liste als Ergebnis zurück.
 .. index:: next()
 .. _next():
 
+.. }}}
+
 next()
 ^^^^^^
+.. {{{
 
 Die Funktion ``next(iterator)`` bewirkt einen Aufruf von
 ``iterator.__next__()``, gibt also das nächste Element der Iterator-Sequenz aus.
@@ -1186,15 +1268,18 @@ ein ``StopIteration``-Error ausgegeben.
 
     next(iterator)
     # Ergebnis:
-    # ----> 1 next(iterator)
+    # --> 1 next(iterator)
     # StopIteration
 
 
 .. index:: object()
 .. _object():
 
+.. }}}
+
 object()
 ^^^^^^^^
+.. {{{
 
 Die Funktion `object()
 <https://docs.python.org/3/library/functions.html#object>`__ erzeugt eine
@@ -1208,8 +1293,11 @@ keine weiteren Attribute oder Methoden hinzugefügt werden können.
 .. index:: oct()
 .. _oct():
 
+.. }}}
+
 oct()
 ^^^^^
+.. {{{
 
 Die Funktion `oct(int-wert)
 <https://docs.python.org/3/library/functions.html#oct>`__ gibt eine Zeichenkette
@@ -1228,8 +1316,11 @@ Oktalzahl.
 .. index:: open()
 .. _open():
 
+.. }}}
+
 open()
 ^^^^^^
+.. {{{
 
 Die Funktion `open(dateiname)
 <https://docs.python.org/3/library/functions.html#open>`__ gibt ein zum
@@ -1243,8 +1334,11 @@ Die Funktion ``open()`` ist im Abschnitt :ref:`Dateien
 .. index:: ord()
 .. _ord():
 
+.. }}}
+
 ord()
 ^^^^^
+.. {{{
 
 Die Funktion `ord(zeichen)
 <https://docs.python.org/3/library/functions.html#ord>`__ gibt die Unicode-Zahl
@@ -1268,8 +1362,11 @@ Unicode-Zeichensatzes bereits aus.
 .. index:: pow()
 .. _pow():
 
+.. }}}
+
 pow()
 ^^^^^
+.. {{{
 
 Die Funktion `pow(zahl1, zahl2)
 <https://docs.python.org/3/library/functions.html#pow>`__ gibt beim Aufruf von
@@ -1289,8 +1386,11 @@ Die Funktion `pow(zahl1, zahl2)
 .. index:: print()
 .. _print():
 
+.. }}}
+
 print()
 ^^^^^^^
+.. {{{
 
 Die Funktion `print(zeichenkette)
 <https://docs.python.org/3/library/functions.html#print>`_ gibt die angegebene
@@ -1309,8 +1409,11 @@ Variablen ausgegeben werden.
 .. index:: property()
 .. _property():
 
+.. }}}
+
 property()
 ^^^^^^^^^^
+.. {{{
 
 Die Funktion `property()
 <https://docs.python.org/3/library/functions.html#property>`__ wird verwendet,
@@ -1393,8 +1496,11 @@ Wertzuweisung überhaupt zulässig ist.
 .. index:: range()
 .. _range():
 
+.. }}}
+
 range()
 ^^^^^^^
+.. {{{
 
 Die Funktion `range()
 <https://docs.python.org/3/library/functions.html#func-range>`__ erzeugt eine
@@ -1439,8 +1545,11 @@ so wird eine absteigende Zahlensequenz generiert.
 .. index:: repr()
 .. _repr():
 
+.. }}}
+
 repr()
 ^^^^^^
+.. {{{
 
 Die Funktion `repr(objekt)
 <https://docs.python.org/3/library/functions.html#repr>`__ gibt als Ergebnis
@@ -1465,8 +1574,11 @@ beispielsweise auch Umlaute im Ausgabe-String enthalten sein können.
 .. index:: reversed()
 .. _reversed():
 
+.. }}}
+
 reversed()
 ^^^^^^^^^^
+.. {{{
 
 Die Funktion `reversed(sequenz)
 <https://docs.python.org/3/library/functions.html#reversed>`__ kann auf eine
@@ -1498,8 +1610,11 @@ umgekehrten Reihenfolge zurück.
 .. index:: round()
 .. _round():
 
+.. }}}
+
 round()
 ^^^^^^^
+.. {{{
 
 Die Funktion `round()
 <https://docs.python.org/3/library/functions.html#round>`__ rundet eine
@@ -1520,8 +1635,11 @@ Stellen gerundet als Ergebnis zurück gegeben.
 .. index:: set()
 .. _set():
 
+.. }}}
+
 set()
 ^^^^^
+.. {{{
 
 Die Funktion `set()
 <https://docs.python.org/3/library/functions.html#func-set>`__ erzeugt ein neues
@@ -1554,8 +1672,11 @@ bleiben ausgeschlossen).
 .. index:: setattr()
 .. _setattr():
 
+.. }}}
+
 setattr()
 ^^^^^^^^^
+.. {{{
 
 Die Funktion `setattr(objekt, attributname, wert)
 <https://docs.python.org/3/library/functions.html#setattr>`__ weist dem
@@ -1595,8 +1716,11 @@ Argument angegebenen Wert zu (sofern dies möglich ist); formal ist
 .. index:: slice()
 .. _slice():
 
+.. }}}
+
 slice()
 ^^^^^^^
+.. {{{
 
 Die Funktion `slice(startwert, stopwert, stepwert)
 <https://docs.python.org/3/library/functions.html#slice>`__ erstellt eine neue
@@ -1655,8 +1779,11 @@ zurückgegeben.
 .. index:: sorted()
 .. _sorted():
 
+.. }}}
+
 sorted()
 ^^^^^^^^
+.. {{{
 
 Die Funktion `sorted(sequenz)
 <https://docs.python.org/3/library/functions.html#sorted>`__ kann auf eine
@@ -1675,8 +1802,11 @@ Reihenfolge zurück.
 .. index:: staticmethod()
 .. _staticmethod():
 
+.. }}}
+
 staticmethod()
 ^^^^^^^^^^^^^^
+.. {{{
 
 Die Funktion `staticmethod(methode)
 <https://docs.python.org/3/library/functions.html#staticmethod>`__ macht die
@@ -1711,8 +1841,11 @@ mittels ``C().my_class_method()`` aufgerufen werden.
 .. index:: str()
 .. _str():
 
+.. }}}
+
 str()
 ^^^^^
+.. {{{
 
 Die Funktion `str(objekt)
 <https://docs.python.org/3/library/functions.html#func-str>`__ gibt eine
@@ -1730,8 +1863,11 @@ Methode ``objekt.__str__()`` der jeweiligen Klasse aufgerufen.
 .. index:: sum()
 .. _sum():
 
+.. }}}
+
 sum()
 ^^^^^
+.. {{{
 
 Die Funktion `sum(sequenz)
 <https://docs.python.org/3/library/functions.html#sum>`__ gibt die Summe eines
@@ -1751,8 +1887,11 @@ iterierbaren Objekts (beispielsweise einer Liste) als Ergebnis zurück.
 .. index:: super()
 .. _super():
 
+.. }}}
+
 super()
 ^^^^^^^
+.. {{{
 
 Die Funktion `super()
 <https://docs.python.org/3/library/functions.html#super>`__ gibt, ausgehend von
@@ -1794,8 +1933,11 @@ Klasse aufzugreifen und gleichzeitig zu modifizieren.
 .. index:: tuple()
 .. _tuple():
 
+.. }}}
+
 tuple()
 ^^^^^^^
+.. {{{
 
 Die Funktion `tuple(sequenz)
 <https://docs.python.org/3/library/functions.html#func-tuple>`__ erzeugt aus der
@@ -1817,8 +1959,11 @@ Liste.
 .. index:: type()
 .. _type():
 
+.. }}}
+
 type()
 ^^^^^^
+.. {{{
 
 Die Funktion `type(objekt) <https://docs.python.org/3/library/functions.html#type>`_
 gibt als Ergebnis den Namen der Klasse des angegebenen Objekts zurück; dies ist
@@ -1856,8 +2001,11 @@ Eigenschaften:
 .. index:: vars()
 .. _vars():
 
+.. }}}
+
 vars()
 ^^^^^^
+.. {{{
 
 Die Funktion `vars() <https://docs.python.org/3/library/functions.html#vars>`__
 gibt, sofern sie ohne Argument aufgerufen wird, als Ergebnis ein ``dict`` mit
@@ -1872,8 +2020,11 @@ wird der Inhalt von ``objekt.__dict__`` als Ergebnis zurückgegeben.
 .. index:: zip()
 .. _zip():
 
+.. }}}
+
 zip()
 ^^^^^
+.. {{{
 
 Die Funktion `zip() <https://docs.python.org/3/library/functions.html#zip>`__
 verbindet -- ähnlich wie ein Reißverschluss -- Elemente aus verschiedenen
@@ -1891,22 +2042,29 @@ dessen Elemente Zusammensetzungen der ursprünglichen Elemente sind.
     list( zip( ['a', 'b', 'c'], [1, 2, 3, 4] ) )
     # Ergebnis: [('a', 1), ('b', 2), ('c', 3)]
 
+.. }}}
 
+.. }}}
 
+.. _Standard-Modul:
 .. _Standard-Module:
 .. _Wichtige Standard-Module:
 
 Wichtige Standard-Module
 ------------------------
+.. {{{
 
 Die im folgenden Abschnitt beschriebenen Module sind standardmäßig in Python
 enthalten, ohne dass zusätzliche Software-Pakete installiert werden müssen:
 
+.. argparse
+.. https://docs.python.org/3/howto/argparse.html
 
 .. _cmath:
 
 ``cmath`` -- Mathe-Modul für komplexe Zahlen
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. {{{
 
 Das `cmath <https://docs.python.org/3/library/cmath.html>`__-Modul umfasst viele
 Funktionen des ``math``-Moduls, die allerdings komplexe Zahlen als Argumente
@@ -1914,8 +2072,11 @@ zulassen.
 
 .. _copy:
 
+.. }}}
+
 ``copy`` -- Kopien von Objekten erstellen
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. {{{
 
 Das `copy <https://docs.python.org/3/library/copy.html>`__-Modul stellt
 insbesondere die Funktion ``deepcopy()`` bereit, mit der :math:`1:1`-Kopien von
@@ -1943,8 +2104,11 @@ Original-Objekts unverändert.
 
 .. _cProfile:
 
+.. }}}
+
 ``cProfile`` -- Profiler
 ^^^^^^^^^^^^^^^^^^^^^^^^
+.. {{{
 
 Mittels des Pakets `cProfile <https://docs.python.org/3/library/profile.html>`__
 und der darin definierten Funktion ``run()`` kann ermittelt werden, wie viel
@@ -1972,15 +2136,38 @@ Mit dem Profiler können in verschachtelten Funktionen schnell "Bottlenecks"
 gefunden werden, also Programmteile, die sehr rechenintensiv sind und daher
 bevorzugt optimiert werden sollten.
 
+.. _functools:
+
+.. }}}
+
+``functools`` -- Funktionen für aufrufbare Objekte
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. {{{
+
+Das `functools <https://docs.python.org/3/library/functools.html>`__-Modul
+stellt einige Funktionen bereit, mit denen sich beispielsweise mathematische
+Funktion oder Lambda-Ausdrücke auf mehrere Elemente einer Liste anwenden lassen
+
+* Die Funktion ``functools.reduce()`` führt die durch das erste Argument
+  angegebene Funktion schrittweise von links nach rechts auf alle Elemente einer
+  als zweites Argument übergebenen Sequenz aus; ein Aufruf von
+  ``ft.reduce(lambda x,y: x*y, [1,2,3,4,5])``. würde beispielsweise
+  ``((((1*2)*3)*4)*5)`` berechnen.
+
+
+
 .. index:: logging (Modul)
 .. _logging:
 
+.. }}}
+
 ``logging`` -- Logger-Modul
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. {{{
 
 Das `logging
 <https://docs.python.org/3/library/logging.html#module-logging>`__-Modul stellt
-einfache Methoden bereit, mit denen ein einfaches Aufzeichnen verschiedener
+einfache Funktionen bereit, mit denen ein einfaches Aufzeichnen verschiedener
 Informationen im Verlauf eines Programms ermöglicht wird.
 
 Das ``logging``-Modul ist im Abschnitt :ref:`Arbeiten mit Logdateien <Arbeiten
@@ -1992,8 +2179,11 @@ mit Logdateien>` näher beschrieben.
 .. index:: math (Modul)
 .. _math:
 
+.. }}}
+
 ``math`` -- Mathematische Funktionen
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. {{{
 
 Das `math <https://docs.python.org/3/library/math.html#module-math>`__-Modul
 stellt eine Vielzahl häufig vorkommender mathematischer Funktionen bereit. Unter
@@ -2047,8 +2237,11 @@ Argument effizient auswerten.
 .. index:: os (Modul)
 .. _os:
 
+.. }}}
+
 ``os`` -- Interaktion mit dem Betriebsystem
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. {{{
 
 Das `os <https://docs.python.org/3/library/os.html>`__-Modul stellt einige
 nützliche Funktionen und Konstanten bereit, um gewöhnliche Aufgaben auf der
@@ -2096,6 +2289,7 @@ werden kann:
 
 ``os.path`` -- Pfadfunktionen
 """""""""""""""""""""""""""""
+.. {{{
 
 Das `os.path <https://docs.python.org/3/library/os.path.html>`__-Modul stellt einige
 nützliche Funktionen bereit, die bei der Arbeit mit Datei- und Verzeichnisnamen
@@ -2120,12 +2314,15 @@ angegebenen (relativen) Dateinamen den zugehörigen absoluten Pfad an.
 
 .. todo os.path.join(verzeichnisname, dateiname)
 
+.. }}}
 
 .. index:: pickle (Modul)
 .. _pickle:
+.. }}}
 
 ``pickle`` -- Speichern von Python-Objekten
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. {{{
 
 Das `pickle <https://docs.python.org/3/library/pickle.html>`__-Modul ermöglicht
 es, während einer Python-Sitzung existierende Objekte in Byte-Strings
@@ -2171,8 +2368,11 @@ angegebenen Datei-Objekt gelesen werden.
 .. index:: Zufallszahlen, random (Modul)
 .. _random:
 
+.. }}}
+
 ``random`` -- Zufallsgenerator
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. {{{
 
 Das `random <https://docs.python.org/3/library/random.html>`__-Modul stellt
 Funktion zum Erzeugen von Zufallszahlen, für das Auswählen eines zufälligen
@@ -2202,10 +2402,16 @@ Anschließend können folgende Funktionen genutzt werden:
 Beispielsweise kann also mittels ``random.randint(1,6)`` das Verhalten eines
 gewöhnlichen sechsflächigen Würfels imitiert werden.
 
+
 .. _sys:
+
+.. }}}
+
+.. re https://docs.python.org/3/library/re.html
 
 ``sys`` -- Systemzugriff
 ^^^^^^^^^^^^^^^^^^^^^^^^
+.. {{{
 
 Das `sys <https://docs.python.org/3/library/sys.html>`__-Modul stellt Variablen
 und Funktion bereit, die in unmittelbarem Zusammenhang mit dem
@@ -2231,12 +2437,14 @@ Python-Interpreter selbst stehen. Hilfreich sind unter anderem:
 * Mit ``sys.version`` wird die Versionsnummer des Python-Interpreters
   ausgegeben.
 
-
-
 .. _timeit:
+
+
+.. }}}
 
 ``timeit`` -- Laufzeitanalyse
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. {{{
 
 Mittels des Moduls `timeit
 <https://docs.python.org/3/library/timeit.html>`__ und der
@@ -2250,54 +2458,118 @@ Zeit eine Funktion für einen Aufruf benötigt:
     timeit.timeit("x = 2 ** 2")
     # Ergebnis: 0.02761734207160771
 
+.. }}}
 
 
 
-
-
+.. }}}
 
 .. index:: ASCII-Codes
 .. _ASCII-Codes:
 
 ASCII-Codes
 -----------
+.. {{{
 
 .. _tab-ascii:
 
-+-----+---------+-----+---------+-----+--------+-----+-------+-----+-------+-----+-------+-----+-------+-----+---------+
-| Dez | ASCII   | Dez | ASCII   | Dez | ASCII  | Dez | ASCII | Dez | ASCII | Dez | ASCII | Dez | ASCII | Dez | ASCII   |
-+-----+---------+-----+---------+-----+--------+-----+-------+-----+-------+-----+-------+-----+-------+-----+---------+
-| 0   | ``NUL`` | 16  | ``DLE`` | 32  | ``SP`` | 48  | ``0`` | 64  | ``@`` | 80  | ``P`` | 96  |  \`   | 112 | ``p``   |
-+-----+---------+-----+---------+-----+--------+-----+-------+-----+-------+-----+-------+-----+-------+-----+---------+
-| 1   | ``SOH`` | 17  | ``DC1`` | 33  | ``!``  | 49  | ``1`` | 65  | ``A`` | 81  | ``Q`` | 97  | ``a`` | 113 | ``q``   |
-+-----+---------+-----+---------+-----+--------+-----+-------+-----+-------+-----+-------+-----+-------+-----+---------+
-| 2   | ``STX`` | 18  | ``DC2`` | 34  | ``"``  | 50  | ``2`` | 66  | ``B`` | 82  | ``R`` | 98  | ``b`` | 114 | ``r``   |
-+-----+---------+-----+---------+-----+--------+-----+-------+-----+-------+-----+-------+-----+-------+-----+---------+
-| 3   | ``ETX`` | 19  | ``DC3`` | 35  | ``#``  | 51  | ``3`` | 67  | ``C`` | 83  | ``S`` | 99  | ``c`` | 115 | ``s``   |
-+-----+---------+-----+---------+-----+--------+-----+-------+-----+-------+-----+-------+-----+-------+-----+---------+
-| 4   | ``EOT`` | 20  | ``DC4`` | 36  | ``$``  | 52  | ``4`` | 68  | ``D`` | 84  | ``T`` | 100 | ``d`` | 116 | ``t``   |
-+-----+---------+-----+---------+-----+--------+-----+-------+-----+-------+-----+-------+-----+-------+-----+---------+
-| 5   | ``ENQ`` | 21  | ``NAK`` | 37  | ``%``  | 53  | ``5`` | 69  | ``E`` | 85  | ``U`` | 101 | ``e`` | 117 | ``u``   |
-+-----+---------+-----+---------+-----+--------+-----+-------+-----+-------+-----+-------+-----+-------+-----+---------+
-| 6   | ``ACK`` | 22  | ``SYN`` | 38  | ``&``  | 54  | ``6`` | 70  | ``F`` | 86  | ``V`` | 102 | ``f`` | 118 | ``v``   |
-+-----+---------+-----+---------+-----+--------+-----+-------+-----+-------+-----+-------+-----+-------+-----+---------+
-| 7   | ``BEL`` | 23  | ``ETB`` | 39  | ``'``  | 55  | ``7`` | 71  | ``G`` | 87  | ``W`` | 103 | ``g`` | 119 | ``w``   |
-+-----+---------+-----+---------+-----+--------+-----+-------+-----+-------+-----+-------+-----+-------+-----+---------+
-| 8   | ``BS``  | 24  | ``CAN`` | 40  | ``(``  | 56  | ``8`` | 72  | ``H`` | 88  | ``X`` | 104 | ``h`` | 120 | ``x``   |
-+-----+---------+-----+---------+-----+--------+-----+-------+-----+-------+-----+-------+-----+-------+-----+---------+
-| 9   | ``HT``  | 25  | ``EM``  | 41  | ``)``  | 57  | ``9`` | 73  | ``I`` | 89  | ``Y`` | 105 | ``i`` | 121 | ``y``   |
-+-----+---------+-----+---------+-----+--------+-----+-------+-----+-------+-----+-------+-----+-------+-----+---------+
-| 10  | ``LF``  | 26  | ``SUB`` | 42  | ``*``  | 58  | ``:`` | 74  | ``J`` | 90  | ``Z`` | 106 | ``j`` | 122 | ``z``   |
-+-----+---------+-----+---------+-----+--------+-----+-------+-----+-------+-----+-------+-----+-------+-----+---------+
-| 11  | ``VT``  | 27  | ``ESC`` | 43  | ``+``  | 59  | ``;`` | 75  | ``K`` | 91  | ``[`` | 107 | ``k`` | 123 | ``{``   |
-+-----+---------+-----+---------+-----+--------+-----+-------+-----+-------+-----+-------+-----+-------+-----+---------+
-| 12  | ``FF``  | 28  | ``FS``  | 44  | ``,``  | 60  | ``<`` | 76  | ``L`` | 92  | ``\`` | 108 | ``l`` | 124 | ``|``   |
-+-----+---------+-----+---------+-----+--------+-----+-------+-----+-------+-----+-------+-----+-------+-----+---------+
-| 13  | ``CR``  | 29  | ``GS``  | 45  | ``-``  | 61  | ``=`` | 77  | ``M`` | 93  | ``]`` | 109 | ``m`` | 125 | ``}``   |
-+-----+---------+-----+---------+-----+--------+-----+-------+-----+-------+-----+-------+-----+-------+-----+---------+
-| 14  | ``SO``  | 30  | ``RS``  | 46  | ``.``  | 62  | ``>`` | 78  | ``N`` | 94  | ``^`` | 110 | ``n`` | 126 | ``~``   |
-+-----+---------+-----+---------+-----+--------+-----+-------+-----+-------+-----+-------+-----+-------+-----+---------+
-| 15  | ``SI``  | 31  | ``US``  | 47  | ``/``  | 63  | ``?`` | 79  | ``O`` | 95  | ``_`` | 111 | ``o`` | 127 | ``DEL`` |
-+-----+---------+-----+---------+-----+--------+-----+-------+-----+-------+-----+-------+-----+-------+-----+---------+
+    +-----+---------+-----+---------+-----+--------+-----+-------+-----+-------+-----+-------+-----+-------+-----+---------+
+    | Dez | ASCII   | Dez | ASCII   | Dez | ASCII  | Dez | ASCII | Dez | ASCII | Dez | ASCII | Dez | ASCII | Dez | ASCII   |
+    +-----+---------+-----+---------+-----+--------+-----+-------+-----+-------+-----+-------+-----+-------+-----+---------+
+    | 0   | ``NUL`` | 16  | ``DLE`` | 32  | ``SP`` | 48  | ``0`` | 64  | ``@`` | 80  | ``P`` | 96  |  \`   | 112 | ``p``   |
+    +-----+---------+-----+---------+-----+--------+-----+-------+-----+-------+-----+-------+-----+-------+-----+---------+
+    | 1   | ``SOH`` | 17  | ``DC1`` | 33  | ``!``  | 49  | ``1`` | 65  | ``A`` | 81  | ``Q`` | 97  | ``a`` | 113 | ``q``   |
+    +-----+---------+-----+---------+-----+--------+-----+-------+-----+-------+-----+-------+-----+-------+-----+---------+
+    | 2   | ``STX`` | 18  | ``DC2`` | 34  | ``"``  | 50  | ``2`` | 66  | ``B`` | 82  | ``R`` | 98  | ``b`` | 114 | ``r``   |
+    +-----+---------+-----+---------+-----+--------+-----+-------+-----+-------+-----+-------+-----+-------+-----+---------+
+    | 3   | ``ETX`` | 19  | ``DC3`` | 35  | ``#``  | 51  | ``3`` | 67  | ``C`` | 83  | ``S`` | 99  | ``c`` | 115 | ``s``   |
+    +-----+---------+-----+---------+-----+--------+-----+-------+-----+-------+-----+-------+-----+-------+-----+---------+
+    | 4   | ``EOT`` | 20  | ``DC4`` | 36  | ``$``  | 52  | ``4`` | 68  | ``D`` | 84  | ``T`` | 100 | ``d`` | 116 | ``t``   |
+    +-----+---------+-----+---------+-----+--------+-----+-------+-----+-------+-----+-------+-----+-------+-----+---------+
+    | 5   | ``ENQ`` | 21  | ``NAK`` | 37  | ``%``  | 53  | ``5`` | 69  | ``E`` | 85  | ``U`` | 101 | ``e`` | 117 | ``u``   |
+    +-----+---------+-----+---------+-----+--------+-----+-------+-----+-------+-----+-------+-----+-------+-----+---------+
+    | 6   | ``ACK`` | 22  | ``SYN`` | 38  | ``&``  | 54  | ``6`` | 70  | ``F`` | 86  | ``V`` | 102 | ``f`` | 118 | ``v``   |
+    +-----+---------+-----+---------+-----+--------+-----+-------+-----+-------+-----+-------+-----+-------+-----+---------+
+    | 7   | ``BEL`` | 23  | ``ETB`` | 39  | ``'``  | 55  | ``7`` | 71  | ``G`` | 87  | ``W`` | 103 | ``g`` | 119 | ``w``   |
+    +-----+---------+-----+---------+-----+--------+-----+-------+-----+-------+-----+-------+-----+-------+-----+---------+
+    | 8   | ``BS``  | 24  | ``CAN`` | 40  | ``(``  | 56  | ``8`` | 72  | ``H`` | 88  | ``X`` | 104 | ``h`` | 120 | ``x``   |
+    +-----+---------+-----+---------+-----+--------+-----+-------+-----+-------+-----+-------+-----+-------+-----+---------+
+    | 9   | ``HT``  | 25  | ``EM``  | 41  | ``)``  | 57  | ``9`` | 73  | ``I`` | 89  | ``Y`` | 105 | ``i`` | 121 | ``y``   |
+    +-----+---------+-----+---------+-----+--------+-----+-------+-----+-------+-----+-------+-----+-------+-----+---------+
+    | 10  | ``LF``  | 26  | ``SUB`` | 42  | ``*``  | 58  | ``:`` | 74  | ``J`` | 90  | ``Z`` | 106 | ``j`` | 122 | ``z``   |
+    +-----+---------+-----+---------+-----+--------+-----+-------+-----+-------+-----+-------+-----+-------+-----+---------+
+    | 11  | ``VT``  | 27  | ``ESC`` | 43  | ``+``  | 59  | ``;`` | 75  | ``K`` | 91  | ``[`` | 107 | ``k`` | 123 | ``{``   |
+    +-----+---------+-----+---------+-----+--------+-----+-------+-----+-------+-----+-------+-----+-------+-----+---------+
+    | 12  | ``FF``  | 28  | ``FS``  | 44  | ``,``  | 60  | ``<`` | 76  | ``L`` | 92  | ``\`` | 108 | ``l`` | 124 | ``|``   |
+    +-----+---------+-----+---------+-----+--------+-----+-------+-----+-------+-----+-------+-----+-------+-----+---------+
+    | 13  | ``CR``  | 29  | ``GS``  | 45  | ``-``  | 61  | ``=`` | 77  | ``M`` | 93  | ``]`` | 109 | ``m`` | 125 | ``}``   |
+    +-----+---------+-----+---------+-----+--------+-----+-------+-----+-------+-----+-------+-----+-------+-----+---------+
+    | 14  | ``SO``  | 30  | ``RS``  | 46  | ``.``  | 62  | ``>`` | 78  | ``N`` | 94  | ``^`` | 110 | ``n`` | 126 | ``~``   |
+    +-----+---------+-----+---------+-----+--------+-----+-------+-----+-------+-----+-------+-----+-------+-----+---------+
+    | 15  | ``SI``  | 31  | ``US``  | 47  | ``/``  | 63  | ``?`` | 79  | ``O`` | 95  | ``_`` | 111 | ``o`` | 127 | ``DEL`` |
+    +-----+---------+-----+---------+-----+--------+-----+-------+-----+-------+-----+-------+-----+-------+-----+---------+
 
+.. }}}
 
+.. {{{
+
+.. .. index:: bytearray()
+.. .. _bytearray():
+
+.. bytearray()
+.. ^^^^^^^^^^^
+
+.. Keine Funktion, sondern eine Klasse!
+.. https://docs.python.org/3/library/stdtypes.html#bytearray
+
+.. https://docs.python.org/3/library/stdtypes.html#bytes-methods
+
+.. Die Funktion `bytearray(string, encoding)
+.. <https://docs.python.org/3/library/functions.html#bytearray>`__ erzeugt aus der
+.. angegebenen Zeichenkette eine neue Instanz eines ``bytearray``-Objekts; als
+.. Encoding kann beispielsweise ``'utf-8'`` oder ``'ascii'`` angegeben werden.
+.. Dieser Datentyp besteht aus ganzzahligen Werten zwischen ``0`` und ``255`` und
+.. ist -- ähnlich wie der Datentyp ``str`` zur Speicherung von Zeichenketten in
+.. Textdateien vorgesehen ist -- zur Speicherung von binären Daten gedacht.
+
+.. *Beispiel:*
+
+.. .. code-block:: python
+
+..     bytearray("Hallo Welt!", 'utf-8')
+..     # Ergebnis: bytearray(b'Hallo Welt!')
+
+.. Die für ``bytes`` und ``bytearrays`` verfügbaren Methoden entsprechen im
+.. Wesentlichen den jeweiligen Methoden für Zeichenketten (siehe Abschnitt `Bytes
+.. and Bytearray Operations
+.. <https://docs.python.org/3/library/stdtypes.html#bytes-and-bytearray-operations>`__
+.. der offiziellen Python-Dokumentation).
+
+.. .. index:: bytes()
+.. .. _bytes():
+
+.. bytes()
+.. ^^^^^^^
+
+.. Keine Funktion, sondern eine Klasse!
+.. https://docs.python.org/3/library/stdtypes.html#bytes
+
+.. https://docs.python.org/3/library/stdtypes.html#bytes-methods
+
+.. Die Funktion `bytes(string, encoding)
+.. <https://docs.python.org/3/library/functions.html#bytes>`__ erzeugt aus der
+.. angegebenen Zeichenkette eine neue Instanz eines ``bytes``-Objekts; als Encoding
+.. kann beispielsweise ``'utf-8'`` oder ``'ascii'`` angegeben werden. Das
+.. ``bytes``-Objekt entspricht im Wesentlichen einem :ref:`bytearray
+.. <bytearray()>`-Objekt, ist aber nicht veränderlich (so wie ein :ref:`Tupel
+.. <Tupel>` eine unveränderliche :ref:`Liste <Liste>` darstellt).
+
+.. *Beispiel:*
+
+.. .. code-block:: python
+
+..     bytes("Hallo Welt!", 'utf-8')
+..     # Ergebnis: b'Hallo Welt!'
+.. }}}
+
+.. vim: set foldmethod=marker: 

@@ -17,8 +17,8 @@ ebenso verwendet werden, um die Funktionsweise ein unbekanntes Programms
 leichter nachvollziehen zu können, indem man sieht, welche Funktionen im Laufe
 des Programms nacheinander aufgerufen werden.
 
-Der Python-Debugger ``pdb`` kann in einer Shell folgendermaßen aufgerufen
-werden:
+Der Python-Debugger `pdb <https://docs.python.org/3/library/pdb.html>`__ kann in
+einer Shell folgendermaßen aufgerufen werden:
 
 .. code-block:: sh
 
@@ -44,6 +44,13 @@ anderem folgende Anweisungen eingegeben werden:
   beispielsweise gibt ``p variablenname`` den Wert der angegebenen Variablen zum
   aktuellen Zeitpunkt im Programm an. Mit ``pp`` wird das Ergebnis in "pretty
   print"-Form ausgegeben.
+
+* ``list`` (oder kurz: ``l``):
+
+  Mit ``list`` wird der Code-Bereich ausgegeben, in dem man sich beim Debuggen
+  aktuell im Programm befindet. Standardmäßig (und meist völlig ausreichend)
+  werden elf Zeilen an Code ausgegeben, wobei sich die aktuelle Code-Zeile in
+  der Mitte befindet und mit ``->`` gekennzeichnet ist.
 
 * ``return`` (oder kurz: ``r``):
 
@@ -83,6 +90,31 @@ anderem folgende Anweisungen eingegeben werden:
 
   Mit ``exit`` oder ``quit`` wird der Debugger beendet.
 
+Zusätzlich lassen sich im Debugger auch Python-Statements ausführen; hierzu muss
+die jeweilige Eingabe-Zeile lediglich mit einem Ausrufezeichen (``!``) begonnen
+werden.
+
+Eine weitere, oftmals sogar bessere Nutzungs-Variante ist es, den Debugger nicht
+direkt aufzurufen, sondern ihn erst ab einer bestimmten Stelle aus dem Programm
+heraus zu starten. Hierzu kann man folgendermaßen vorgehen:
+
+.. code-block:: python
+
+    import pdb
+
+    # ... anderer Python-Code ...
+
+    # Debugging ab hier beginnen:
+    pdb.set_trace()
+
+    # ... anderer Python-Code ...
+
+Nach dem Importieren des ``pdb``-Moduls kann man an einer beliebigen Stelle,
+auch innerhalb einer Funktion, mit ``pdb.set_trace()`` den Debugger starten.
+Auch bei dieser Benutzungsweise erscheint der ``pdb``-Eingabeprompt, wo wiederum
+die obigen Anweisungen genutzt werden können; das Debuggen beginnt dann
+allerdings erst an der "spannenden" Stelle.
+
 .. Debugging mit Ipython
 
 .. index:: Logdatei
@@ -98,9 +130,10 @@ große Ähnlichkeit mit simplen ``print()``-Anweisungen haben. Die Ausgabe wird
 allerdings üblicherweise nicht auf dem Bildschirm, sondern mit einer
 Standard-Formatierung in eine Logdatei geschrieben. [#]_
 
-In Python kann ein Logging einfach mit Hilfe des ``logging``-Moduls umgesetzt
-werden. Beispielsweise kann man ein Logging in einer interaktiven
-Interpreter-Sitzung folgendermaßen aktivieren:
+In Python kann ein Logging einfach mit Hilfe des `logging
+<https://docs.python.org/3/library/logging.html>`-Moduls umgesetzt werden.
+Beispielsweise kann man ein Logging in einer interaktiven Interpreter-Sitzung
+folgendermaßen aktivieren:
 
 .. code-block:: python
 
@@ -150,7 +183,7 @@ Hierfür kann die Basis-Konfiguration beispielsweise so aussehen:
     import modul2
 
     # Basis-Einstellungen festlegen:
-    logging.basicConfig(filename='logdatei.log',
+    logging.basicConfig(filename='log.txt',
                         format='%(levelname)s: %(message)s',
                         level=logging.DEBUG)
 
@@ -212,10 +245,10 @@ jeweilige Test fehl, und eine entsprechende Fehlermeldung wird angezeigt.
 
 Das Schreiben von so gestalteten Docstrings macht einerseits Code
 nachvollziehbarer; andererseits die integrierten Code-Beispiele auch ein Testen
-der jeweiligen Funktionen. Dazu muss das Paket ``doctest`` importiert werden.
-Bei einem Modul, das ausschließlich Hilfsfunktionen enthält (also üblicherweise
-nur importiert, aber nicht ausgeführt wird, kann folgende Syntax verwendet
-werden:
+der jeweiligen Funktionen. Dazu muss das Paket `doctest
+<https://docs.python.org/3/library/doctest.html>`__ importiert werden. Bei einem
+Modul, das ausschließlich Hilfsfunktionen enthält (also üblicherweise nur
+importiert, aber nicht ausgeführt wird, kann folgende Syntax verwendet werden:
 
 .. code-block:: python
 
@@ -250,10 +283,11 @@ machen. Eine bessere Alternative bieten an dieser Stelle Unit-Tests.
 ``unittest`` -- Automatisiertes Testen
 --------------------------------------
 
-Beim Schreiben von Unit-Tests mit Hilfe des ``unittest``-Pakets wird zu jedem
-Modul ``modulname.py`` ein entsprechendes Test-Modul ``test_modulname.py``, mit
-dessen Hilfe welche die im Hauptmodul enthaltenen Funktionen getestet werden
-können. Alle diese so genannten Unit Tests sollten voneinander unabhängig sein.
+Beim Schreiben von Unit-Tests mit Hilfe des `unittest
+<https://docs.python.org/3/library/unittest.html>`__-Pakets wird zu jedem Modul
+``modulname.py`` ein entsprechendes Test-Modul ``test_modulname.py``, mit dessen
+Hilfe welche die im Hauptmodul enthaltenen Funktionen getestet werden können.
+Alle diese so genannten Unit Tests sollten voneinander unabhängig sein.
 
 Da manche Funktionen oder Module im normalen Betrieb eine bestimmte Umgebung
 benötigen, beispielsweise einen aktiven Webserver, eine Datenbank, oder eine

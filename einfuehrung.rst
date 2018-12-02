@@ -230,20 +230,23 @@ Operatoren mit der höchsten Priorität stehen oben, gleichberechtigte Operatore
           - Positives beziehungsweise negatives Vorzeichen einer Zahl
         * - ``*``, ``/``, ``//``, ``%``
           - Multiplikation, Division, Ganzzahl-Division, Rest (Modulo)
-        * - | ``==``, ``<=``, ``<``,
-            | ``!=``, ``>=``, ``>``,
-            | ``is``, ``is not``,
-            | ``in``, ``not in``
-          - | Wertevergleich (gleich, kleiner als oder gleich, kleiner als,
-            |                 ungleich, größer als oder gleich, größer als)
-            | Identitätsvergleich
-            | Test auf Mengenzugehörigkeit
-        * - ``not``
-          - Logisches Nicht
-        * - ``and``
-          - Logisches Und
-        * - ``or``
-          - Logisches Oder
+        * -  ``<=``, ``<``, ``>``,  ``>=``
+          - Wertevergleich (kleiner als oder gleich, kleiner als, größer als
+            oder gleich, größer als)
+        * - ``==``, ``!=``
+          - Wertevergleich (ist gleich, ist nicht gleich)
+        * - ``=``, ``+=``, ``-=``, ``*=``, ``/=``, ``%=``, ``**=``
+          - Wertezuweisung
+        * - ``is``, ``is not``,
+          - Identitätsvergleich
+        * - ``in``, ``not in``
+          - Test auf Mengenzugehörigkeit
+        * - ``and``, ``or``, ``not``
+          - Logische Operatoren
+
+
+
+.. https://www.tutorialspoint.com/python/operators_precedence_example.htm
 
 .. raw:: latex
 

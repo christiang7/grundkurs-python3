@@ -49,9 +49,9 @@ Elemente alle den gleichen Datentyp haben müssen, erzeugt werden:
     a
     # Ergebnis: array([1, 2, 3, 4, 5])
 
-Die beim Funktionsaufruf von ``array()`` übergebene Liste kann auch
-aus mehreren Teillisten bestehen, um beispielsweise zeilenweise die Werte einer
-Matrix als Numpy-Array zu speichern:
+Die beim Funktionsaufruf von ``array()`` übergebene Liste kann auch aus mehreren
+Teillisten bestehen, um beispielsweise zeilenweise die Werte einer :ref:`Matrix
+<gwm:Matrizen>`  als Numpy-Array zu speichern:
 
 .. code-block:: python
 

@@ -1,4 +1,4 @@
-Leistungsaufgabn
+Leistungsaufgabe
 ================
 
 .. only:: html

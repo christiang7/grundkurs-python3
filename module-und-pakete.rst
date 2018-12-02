@@ -1,8 +1,12 @@
 .. index:: Modul
-.. _Module:
+.. _Module und Pakete:
 
 Module und Pakete
 =================
+
+
+.. _Modul:
+.. _Module:
 
 Module
 ------
@@ -21,6 +25,7 @@ ein bis zwei Sätzen zusammenfassen lassen sollten.
 Jedes Modul stellt einen eigenen Namensraum für Variablen dar, so dass
 gleichnamige Funktionen, die in unterschiedlichen Modulen definiert sind, keine
 Konflikte verursachen.
+
 
 .. index:: import()
 
@@ -129,6 +134,9 @@ Python-Dokumentation https://docs.python.org/3/ angegeben.
 
 
 .. index:: __name__, __main__
+.. _ifmain:
+.. _name:
+.. _main:
 
 .. rubric:: Die ``__name__``-Variable
 
@@ -242,6 +250,8 @@ möglich, mit welcher der Python-Interpreter aufgerufen wurde und die intern
 lediglich den Namen ``__main__`` zugewiesen bekommt: Diese darf nur absolute
 Pfadangaben für Imports enthalten.
 
+.. todo PYTHONPATH
+.. https://www.tutorialspoint.com/python/python_modules.htm
 
 .. _Empfehlungen für Paket-Strukturen:
 
@@ -378,7 +388,7 @@ sind dann üblicherweise folgende Routinen vorhanden:
     .. rubric:: Anmerkungen:
 
 .. [#] Siehe auch `Open Sourcing a Python Project the Right Way
-    <http://jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/>`_
+    <https://jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/>`_
     und `Filesystem structure of a Python project
     <http://as.ynchrono.us/2007/12/filesystem-structure-of-python-project_21.html>`_
     für weitere Tips.

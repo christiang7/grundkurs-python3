@@ -76,7 +76,7 @@ Code-History:
   Text als Muster beinhalten
 
 Die letzten drei eingegeben Code-Zeilen können in Ipython zudem über die
-Variablen ``_``, ``\__`` und ``\___`` referiert werden.
+Variablen ``_``, ``__`` und ``___`` referiert werden.
 
 Startet man Ipython mittels ``ipython3`` als Shell-Anwendung, so kann (abhängig
 von den Einstellungen des jeweiligen Shell-Interpreters) nur begrenzt weit
@@ -172,6 +172,25 @@ aufgenommen. Im folgenden kann damit wahlweise ``pwd`` oder ``%pwd``
 eingegeben werden, um den Namen des aktuellen Arbeitsverzeichnisses anzuzeigen;
 das beziehungsweise die ``%``-Zeichen können anschließend also weggelassen werden.
 
+.. _Wissenschaftliche Notation von Zahlen:
+
+.. rubric:: Wissenschaftliche Notation von Zahlen
+
+Mittels der ``%precicion``-Anweisung kann eingestellt werden, in welchem Format
+Zahlenergebnisse im Ipython-Interpreter ausgegeben werden sollen. Persönlich
+empfinde ich folgende Einstellung als angenehm:
+
+.. code-block:: python
+
+    %precision %.4g
+
+Mit dieser Einstellung erhält man Ergebnisse mit wissenschaftlicher "e-Notation"
+dargestellt, wobei maximal drei Nachkommastellen ausgegeben werden;
+beispielsweise liefert auf diese Weise die Eingabe ``5/100000000000000000000``
+das Ergebnis ``5e-20``.
+
+.. Add (or edit) the line c.InteractiveShellApp.exec_lines = ['%precision %.4g']
+.. http://stackoverflow.com/questions/16866761/set-ipythons-default-scientific-notation-threshold
 
 .. _Zeilen und Zellen:
 
@@ -365,7 +384,21 @@ somit beispielsweise folgendermaßen aussehen:
     # lines of code to run at IPython startup.
     c.InteractiveShellApp.exec_lines = [
         'import math as m',
+        'import numpy as np',
+        'import matplotlib as mpl',
+        'import matplotlib.pyplot as plt',
         'import sympy as sy',
+        'import pandas as pd',
+        'pi = m.pi',
+        'sq = m.sqrt',
+        'sin = m.sin',
+        'cos = m.cos',
+        'tan = m.tan',
+        'atan = m.atan',
+        'rad = m.radians',
+        'deg = m.degrees',
+        'g = 9.81',
+        '%precision %.4g',
         ]
 
     # Autoindent IPython code entered interactively.
@@ -376,6 +409,11 @@ somit beispielsweise folgendermaßen aussehen:
 
     c.TerminalInteractiveShell.history_length = 10000
 
+    # Set the color scheme (NoColor, Linux, or LightBG).
+    c.TerminalInteractiveShell.colors = 'Linux'
+    c.TerminalInteractiveShell.color_info = True
+
+
 
 Die einzelnen Optionen können bei Bedarf auch innerhalb einer laufenden Sitzung
 geändert werden; hierzu muss man lediglich eine Anweisung der Form ``%config
@@ -385,6 +423,8 @@ InteractiveShell.autoindent = True`` eingeben.
 .. todo DEMO-Funktion https://ipython.org/ipython-doc/2/interactive/reference.html#interactive-demos
 .. todo EMBEDDING Ipython https://ipython.org/ipython-doc/2/interactive/reference.html
 .. todo Ipythen Kernel -> Debugging
+
+.. https://ipython.readthedocs.io/en/stable/interactive/plotting.html
 
 Weitere Infos zu Ipython gibt es in der offiziellen `Dokumentation (en.)
 <https://ipython.org/ipython-doc/2/index.html>`__.

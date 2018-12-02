@@ -22,9 +22,9 @@ Arten von Programm-Fehlern
   Programmaufrufs angezeigt, und das Programm startet nicht.
 
   Die zwei geläufigsten Syntax-Checker für Python-Code sind `pylint
-  <https://pylint.org>`_ und `pyflakes <https://pypi.python.org/pypi/pyflakes>`_;
+  <https://pylint.org>`_ und `pyflakes <https://pypi.org/project/pyflakes/>`_;
   zudem gibt es einen "Style"-Checker namens `pep8
-  <https://pypi.python.org/pypi/pep8>`_, der prüft, ob die offiziellen
+  <https://pypi.org/project/pep8/>`_, der prüft, ob die offiziellen
   Empfehlung für das Aussehen von Python-Code eingehalten werden (beispielsweise
   keine Zeilen mit mehr als 80 Zeichen auftreten). Diese zusätzlichen Werkzeuge
   können folgendermaßen installiert werden:

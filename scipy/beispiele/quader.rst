@@ -56,12 +56,7 @@ Zur Berechnung der Quaderdiagonale kann die Funktion ``sqrt()`` aus dem `math
     # cuboid_diagonal: 14.142135623730951
 
 Bei der Berechnung des Quadervolumens wurde, um Schreibarbeit zu sparen, die
-Funktion ``reduce()`` aus dem `functools
-<https://docs.python.org/3/library/functools.html>`_-Modul verwendet. Diese
-führt die durch das erste Argument angegebene Funktion schrittweise von links
-nach rechts auf alle Elemente einer als zweites Argument übergebenen Sequenz
-aus; ein Aufruf von ``ft.reduce(lambda x,y: x*y, [1,2,3,4,5])``. würde
-beispielsweise ``((((1*2)*3)*4)*5)`` berechnen.
+Funktion ``reduce()`` aus dem :ref:`functools <functools>`-Modul verwendet.
 
 Anstelle des Lambda-Ausdrucks (quasi einer Funktion ohne Namen) kann auch die
 Funktion ``mul()`` aus dem Modul `operator

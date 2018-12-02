@@ -9,6 +9,7 @@ zusammengefasst, die speziell für wissenschaftliches Arbeiten entwickelt wurden
 .. toctree::
     :maxdepth: 2
 
+    mathematik-mit-standard-modulen.rst
     ipython.rst
     matplotlib.rst
     numpy.rst

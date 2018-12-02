@@ -4,15 +4,16 @@ Beispielaufgaben für Scipy, Sympy und Pandas
 ---------------------------------------------
 
 Diese Sammlung an Übungsaufgaben und Lösungen (mit Quellcode) stellt eine in
-Python 3 geschriebene Version einer Vielzahl an ursprünglich für Maxima entwickelten
-Beispielaufgaben dar. [#]_
+Python 3 geschriebene Version einer Vielzahl an ursprünglich für Maxima
+entwickelten Beispielaufgaben dar (siehe `Original-Quelle
+<http://www.lungau-academy.at/wxmax1001/>`__).
 
-.. only:: html
+.. .. only:: html
 
-    .. sidebar:: Hinweis
+..     .. sidebar:: Hinweis
 
-        Eine Druckversion dieser Seite ist als :download:`PDF-Dokument
-        <tutorial-scipy-sympy.pdf>` verfügbar.
+..         Eine Druckversion dieser Seite ist als :download:`PDF-Dokument
+..         <tutorial-scipy-sympy.pdf>` verfügbar.
 
 .. toctree::
     :maxdepth: 2
@@ -37,14 +38,14 @@ Beispielaufgaben dar. [#]_
 .. No.4 Newton Unterprogramm: Das eigentliche "Unterprogramm" fehlt leider..
 .. No.5 Einfaches Zahlenraetsel: 404 Error.
 
-.. raw:: html
+.. .. raw:: html
 
-    <hr />
+..     <hr />
 
-.. only:: html
+.. .. only:: html
 
-    .. rubric:: Anmerkung:
+..     .. rubric:: Anmerkung:
 
-    .. [#] Die Original-Übungsaufgaben lassen sich unter folgender Adresse abrufen:
+..     .. [#] Die Original-Übungsaufgaben lassen sich unter folgender Adresse abrufen:
 
-    * http://www.lungau-academy.at/wx1/
+..     * http://www.lungau-academy.at/wx1/

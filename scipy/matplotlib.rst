@@ -6,7 +6,7 @@
 ``matplotlib`` -- ein Plotter für Diagramme
 ===========================================
 
-Die `Matplotlib <http://matplotlib.org/contents.html>`__ ist eine umfangreichste
+Die `Matplotlib <https://matplotlib.org/contents.html>`__ ist eine umfangreichste
 Bibliothek, mit deren Hilfe verschiedene Diagrammtypen wie Linien-, Stab- oder
 Kuchendiagramme, Histogramme, Boxplots, Kontourdiagramme, aber auch
 dreidimensionale Diagramme und Funktionenplots auf einfache Weise erstellt
@@ -171,9 +171,10 @@ Die Funktion ``plt.plot()`` bietet bereits selbst einige Einstellungsmöglichkei
     | ``+``  | Einzelne Punkte, Darstellung als farbige ``+``-Zeichen |
     +--------+--------------------------------------------------------+
 
-  Es ist auch möglich, beispielsweise mittels ``'b'`` nur die Linienfarbe auf
-  ``blue`` oder mittels ``'--'`` nur die Linienform als gestrichelte Linie
-  festzulegen.
+  Eine vollständige Liste möglicher Marker findet sich `hier
+  <https://matplotlib.org/api/markers_api.html>`__. Es ist auch möglich,
+  beispielsweise mittels ``'b'`` nur die Linienfarbe auf ``blue`` oder mittels
+  ``'--'`` nur die Linienform als gestrichelte Linie festzulegen.
 
 * Als Alternative zu der zuletzt genannten Festlegung von Farbe und Form einer
   Diagrammlinie kann für das obige Beispiel auch folgende explizite Syntax
@@ -305,7 +306,7 @@ Matplotlib-Diagramme haben allgemein folgenden Aufbau:
     :width: 45%
 
     Allgemeiner Aufbau eines Matplotlib-Diagramms (Quelle:
-    `Matplotlib-Dokumentation <http://matplotlib.org/faq/usage_faq.html>`__
+    `Matplotlib-Dokumentation <https://matplotlib.org/faq/usage_faq.html>`__
 
 Die Basis eines jeden Diagramms ist also ein ``Figure``-Objekt (mit möglichem
 Titel), das eigentliche Diagramm wird durch den Wertebereich der Achsen
@@ -642,6 +643,10 @@ mittels ``plt.legend()`` anzeigen:
     # Legende einblenden:
     plt.legend(loc='upper left', frameon=True)
 
+.. Mögliche Platzierungen: 'best' 'upper right' 'upper left' 'lower left' 'lower
+.. right' 'right' 'center left' 'center right' 'lower center' 'upper center'
+.. 'center'
+
 Als zusätzliche Beschriftung können noch weitere Text-Elemente in das Diagramm
 aufgenommen werden. Besondere Stellen lassen sich zudem mit Pfeilen oder
 Hilfslinien hervorheben.
@@ -694,6 +699,7 @@ Damit erhält man schließlich das folgende Diagramm:
         <sinus-und-cosinus-6.py>`
 
 
+.. todo Mehrere Teildiagramme
 .. plt.subplot(211)
 .. plt.plot(t1, f(t1), 'bo', t2, f(t2), 'k')
 
@@ -701,10 +707,36 @@ Damit erhält man schließlich das folgende Diagramm:
 .. plt.plot(t2, np.cos(2*np.pi*t2), 'r--')
 .. plt.show()
 
-.. todo Text einfügen
+.. todo Konfigurationen
+.. http://matplotlib.org/users/customizing.html#customizing-matplotlib
+
+.. todo Text rendering with LaTeX
+.. http://matplotlib.org/users/usetex.html
 
 
+.. from matplotlib import rc
+.. rc('text', usetex=True)
+.. plt.rc('text', usetex=True)
+.. plt.rc('font', family='serif')
+.. plt.rc('font', size=12.0)
 
+.. #keymap.yscale : l                   # toggle scaling of y-axes ('log'/'linear')
+.. #keymap.xscale : L, k                # toggle scaling of x-axes ('log'/'linear')
+
+.. http://matplotlib.org/users/text_intro.html
+
+.. On Linux, it looks in .config/matplotlib/matplotlibrc
+
+.. Fläche unter Graphen hervorheben: 
+.. ax2.fill_between(r.date, pricemin, r.close, facecolor='blue', alpha=0.5)
+
+.. http://matplotlib.org/users/recipes.html
+
+.. # place a text box in upper left in axes coords
+.. ax.text(0.05, 0.95, textstr, transform=ax.transAxes, fontsize=14,
+        .. verticalalignment='top', bbox=props)
+
+.. yscale('log')
 
 ... to be continued ...
 
@@ -717,10 +749,17 @@ Damit erhält man schließlich das folgende Diagramm:
 .. Diagramm wird unmittelbar -- also ohne Aufruf von ``plt.show()`` -- in
 .. qtconsole angezeigt.
 
+.. %config InlineBackend.figure_format = 'svg'
+
+.. Coole Plot-Variante: 
+.. import seaborn as sbn
+
+.. macht Plots schick!!
+.. https://stackoverflow.com/questions/21923463/add-minor-gridlines-to-matplotlib-plot-using-seaborn
 
 .. rubric:: Links
 
-* `Matplotlib-Gallery mit Code-Beispielen (en.) <http://matplotlib.org/gallery.html>`__
+* `Matplotlib-Gallery mit Code-Beispielen (en.) <https://matplotlib.org/gallery.html>`__
 
 .. raw:: html
 

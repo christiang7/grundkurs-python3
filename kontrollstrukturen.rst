@@ -1,4 +1,5 @@
-
+.. index:: Kontrollstruktur
+.. _Kontrollstruktur:
 .. _Kontrollstrukturen:
 
 Kontrollstrukturen
@@ -12,7 +13,10 @@ Gruppierung und Kenntlichmachung einzelner Code-Blöcke genutzt. Üblicherweise
 wird für jede Einrückungstiefe ein Tabulator-Zeichen (entspricht vier
 Leerzeichen) verwendet.
 
-.. index:: if
+.. index:: if, elif, else
+.. _if:
+.. _elif:
+.. _else:
 .. _Fallunterscheidungen:
 
 ``if``, ``elif`` und ``else`` -- Fallunterscheidungen
@@ -120,6 +124,8 @@ beinhaltet.
 ..  print("var_1 liegt im Intervall [50 ; 100].")
 
 
+.. index:: Schleife
+.. _Schleife:
 .. _Schleifen:
 
 ``while`` und ``for`` -- Schleifen
@@ -130,7 +136,7 @@ bietet hierfür zweierlei Möglichkeiten: Mittels einer ``while``-Schleife wird
 Code so lange ausgeführt, solange eine angegebene Bedingung wahr ist; mit einer
 ``for``-Schleife lassen sich auch komplexere Schleifentypen erzeugen.
 
-.. index:: while
+.. index:: while, Schleife; while
 .. _while:
 
 .. rubric:: ``while``-Schleifen
@@ -194,7 +200,7 @@ Die Schlüsselwörter ``break`` und ``continue`` können ebenfalls in
 ``for``-Schleifen eingesetzt werden.
 
 
-.. index:: for
+.. index:: for, Schleife; for
 .. _for:
 
 .. rubric:: ``for``-Schleifen

@@ -4,12 +4,14 @@
 Installation
 ============
 
+.. _pip:
+.. _pip3:
 .. _Installation von Python3:
 
 Installation von Python3
 ------------------------
 
-Bei neuen Linux-Versionen ist Python in den Versionen 2.7 und 3.4 bereits
+Bei neuen Linux-Versionen ist Python in den Versionen 2.7 und 3.5 bereits
 vorinstalliert. Auf älteren Systemen kann es hingegen notwendig sein, die
 aktuelle (und sehr empfehlenswerte) Version 3 von Python nachträglich zu
 installieren. Hierzu sollten folgende Pakete mittels ``apt`` installiert
@@ -17,36 +19,30 @@ werden:
 
 .. code-block:: sh
 
-    sudo aptitude install python3 python3-doc python3-setuptools pip3
+    sudo aptitude install python3 python3-doc python3-pip
 
-Das zuletzt genannte Paket erlaubt es, zusätzliche Erweiterungen (sofern diese
-nicht auch über ``apt`` installierbar sind) mittels folgender Syntax zu
-installieren:
+Das zuletzt genannte Programm ``pip3`` erlaubt es, zusätzliche Erweiterungen
+(sofern diese nicht auch über ``apt`` installierbar sind) mittels folgender
+Syntax zu installieren:
 
 .. code-block:: sh
 
-    sudo easy_install3 paketname
+    sudo pip3 paketname
 
 Dabei werden automatisch alle bekannten Python-Repositories durchsucht und die
 aktuelle Version installiert. Mit der Option ``-U`` ("update") wird eine
 eventuell bereits vorhandene, nicht mehr aktuelle Version eines Pakets durch die
-neueste Version ersetzt. Beispielsweise kann so mittels ``easy_install3 -U
-Sphinx`` die neueste Version des Python-Dokumentationssystems :ref:`Sphinx
-<gwl:Sphinx>` installiert werden. Alternativ kann auch in den gewöhnlichen
-Linux-Paketquellen mittels ``apt`` nach einem entsprechenden Python-Paket
-gesucht beziehungsweise dieses installiert werden.
+neueste Version ersetzt. Beispielsweise kann so mittels ``pip3 -U Sphinx`` die
+neueste Version des Python-Dokumentationssystems :ref:`Sphinx <gwl:Sphinx>`
+installiert werden. Alternativ kann auch in den gewöhnlichen Linux-Paketquellen
+mittels ``apt`` nach einem entsprechenden Python-Paket gesucht beziehungsweise
+dieses installiert werden.
 
-Eine Alternative zu ``easy-install`` ist ``pip3``:
-
-.. code-block:: sh
-
-    sudo pip3 install paketname
-
-Bei Verwendung von ``pip3`` können die Namen der zu installierenden Module auch,
-in eine Textdatei geschrieben werden, wobei jede Zeile genau einen Modulnamen
-enthält. Heißt die Textdatei beispielsweise ``requirements.txt``, so können
-mittels ``pip3 install -r requirements.txt`` alle benötigten Module auf einmal
-installiert werden.
+.. Bei Verwendung von ``pip3`` können die Namen der zu installierenden Module auch,
+.. in eine Textdatei geschrieben werden, wobei jede Zeile genau einen Modulnamen
+.. enthält. Heißt die Textdatei beispielsweise ``mypackages.txt``, so können
+.. mittels ``pip3 install -r mypackages.txt`` alle benötigten Module auf einmal
+.. installiert werden.
 
 
 
@@ -70,7 +66,9 @@ Folgende Pakete sollten für Ipython3 installiert werden:
 Ipython kann als Shell-Version anschließend mittels ``ipython3``, die graphische
 Oberfläche mittels ``ipython3 qtconsole`` gestartet werden.
 
+
 .. index:: virtualenv
+.. _Virtuelle Umgebung:
 .. _Virtuelle Umgebungen:
 
 Virtuelle Umgebungen
@@ -82,9 +80,11 @@ eine bestimmte Auswahl an installierten Paketen abzustimmen.
 
 Zunächst muss hierzu das Paket ``virtualenv`` installiert werden:
 
+
 .. code-block:: sh
 
-    sudo aptitude install python virtualenv
+    sudo aptitude install python3-pip python3-dev build-essential
+    pip3 install --upgrade virtualenv
 
 Anschließend kann im Basis-Verzeichnis eines Projekts folgendermaßen eine neue
 virtuelle Arbeitsumgebung erstellt werden:
@@ -94,8 +94,19 @@ virtuelle Arbeitsumgebung erstellt werden:
     # Virtuelle Umgebung im Unterverzeichnis "env" erstellen:
     virtualenv -p python3 env
 
-Diese Umgebung kann dann aus dem Projektverzeichnis heraus folgendermaßen
-aktiviert werden:
+    # Oder: 
+
+    virtualenv -p python3 --no-site-packages env
+
+
+Der Unterschied zwischen diesen beiden Varianten liegt darin, dass die erste
+Symlinks auf bereits installierte Python-Pakete setzt (platzsparend, aufbauend
+auf dem bestehenden System), die zweite hingegen eine vollständig neue Umgebung
+schafft (nützlich, wenn ein installiertes Paket für ein konkretes Projekt
+modifiziert werden soll, beispielsweise :ref:`Sphinx <Sphinx>`).
+
+Die virtuelle Umgebung kann dann aus dem Projektverzeichnis heraus
+folgendermaßen aktiviert werden:
 
 .. code-block:: sh
 
@@ -131,5 +142,23 @@ Umgebung wieder beendet:
     # Virtuelle Umgebung beenden:
     deactivate
 
+.. rubric:: Links
+
+Virtualenv-Tutorials:
+
+* https://realpython.com/python-virtual-environments-a-primer/
+* https://www.simononsoftware.com/virtualenv-tutorial-part-2/
+
+.. Python3:
+
+.. aptitude install python3-venv
+
+.. dann
+
+.. python3 -m venv <PFAD>
+
+.. Ersetzt nach folgendem Post allerdings nicht vollkommen virtualenv:
+
+.. https://superuser.com/questions/1039369/how-to-create-a-python3-virtual-environment-as-of-2016
 
 

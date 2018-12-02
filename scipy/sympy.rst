@@ -4,7 +4,7 @@
 ``sympy`` -- ein Computer-Algebra-System
 ========================================
 
-`Sympy <http://www.sympy.org/en/index.html>`__ ist ein Modul, das ein
+`Sympy <https://www.sympy.org/en/index.html>`__ ist ein Modul, das ein
 Computer-Algebra-System für Python bereitstellt. Es kann, wenn bei der
 :ref:`Python-Installation <Installation>` das Paket ``python3-setuptools`` mit
 installiert wurde, in einer Shell folgendermaßen heruntergeladen installiert
@@ -20,7 +20,7 @@ ausgegangen, um Schreibarbeit zu sparen.
 
 Im folgenden werden nur einige häufig vorkommende Funktionen von Sympy
 beschrieben. Eine vollständige Dokumentation findet man auf der
-`Sympy-Projektseite <http://docs.sympy.org/latest/index.html>`_.
+`Sympy-Projektseite <https://docs.sympy.org/latest/index.html>`_.
 
 
 .. _Konstanten und mathematische Funktionen:
@@ -317,9 +317,73 @@ Intervall :math:`[-\sqrt{3}+ 4 \,;\, +\sqrt{3}+ 4]`. Die zusätzliche Angabe von
 0`` bedeutet lediglich, dass es sich bei der Lösung um eine reellwertige Lösung
 handelt. [#]_
 
+... to be continued ...
+
+.. http://docs.sympy.org/dev/modules/evalf.html
+
+.. Exact SymPy expressions can be converted to floating-point approximations
+.. (decimal numbers) using either the .evalf() method or the N() function. N(expr,
+.. <args>) is equivalent to sympify(expr).evalf(<args>).
+
+
+.. >>> nsimplify(0.1)
+.. 1/10
+
+.. >>> nsimplify(pi, tolerance=0.01)
+.. 22/7
+.. >>> nsimplify(pi, tolerance=0.001)
+.. 355
+.. ---
+.. 113
+.. >>> nsimplify(0.33333, tolerance=1e-4)
+.. 1/3
+.. >>> nsimplify(2.0**(1/3.), tolerance=0.001)
+.. 635
+.. ---
+.. 504
+
+.. from sympy import Symbol
+.. a = Symbol("a")
+.. b = Symbol("b")
+.. c = Symbol("c")
+.. exp = (a+b)*40-(c-a)/0.5
+
+.. And that's it. If you meant something else by "calculate", you could also solve exp = 0:
+
+.. sympy.solve(exp)
+.. > {a: [0.0476190476190476*c - 0.952380952380952*b],
+.. >  b: [0.05*c - 1.05*a],
+.. >  c: [20.0*b + 21.0*a]}
+
+.. For everything else, you should really read the docs. Maybe start here: http://docs.sympy.org/0.7.1/tutorial.html#tutorial
+
+.. UPDATE: since you added the values for a, b, c to the question, you can add this to the solution:
+
+.. exp.evalf(subs={a:6, b:5, c:2})
+
+
+.. Symbolic entities are ignored:
+
+.. >>> pi*x
+.. pi * x
+.. >>> _.evalf()
+.. 3.14159265358979 * x
+
+
+.. import matplotlib.pyplot as plt
+.. from sympy.mpmath import plot, log
+
+.. fig = plt.figure()
+.. axes = fig.add_subplot(111)
+.. axes.set_title(r"Plot of $f(x)$ in $[0, 0.01]$.")
+
+.. f = lambda x: x**(1 - log(log(log(log(1/x)))))
+.. plot(f, xlim=[0, 0.01], axes=axes)
+
+
 .. rubric:: Links
 
-* `Sympy Projektseite <http://www.sympy.org/en/index.html>`_
+* `Sympy Projektseite <https://www.sympy.org/en/index.html>`_
 
 .. raw:: html
 

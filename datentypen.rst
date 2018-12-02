@@ -155,6 +155,8 @@ werden:
 Der Absolutwert einer ``int`` oder ``float``-Zahl kann mittels der
 Standardfunktion :ref:`abs(number) <abs()>` ausgegeben werden.
 
+.. %precision %.4g
+.. Add (or edit) the line c.InteractiveShellApp.exec_lines = ['%precision %.4g']
 
 .. index:: float
 .. _Gleitkommazahlen:
@@ -244,8 +246,7 @@ Zeichenkette bleibt jeweils unverändert:
     string_1 * 3
     # Ergebnis: 'HalloHalloHallo'
 
-Die Länge einer Zeichenkette kann mittels ``len()`` bestimmt
-werden:
+Die Länge einer Zeichenkette kann mittels ``len()`` bestimmt werden:
 
 .. code-block:: python
 
@@ -253,8 +254,8 @@ werden:
     # Ergebnis: 10
 
 
-Zur besseren Lesbarkeit sollten Code-Zeilen zudem nicht mehr als 80 Zeichen lang
-sein. Längere Strings können allerdings in der nächsten Zeile fortgesetzt
+Zur besseren Lesbarkeit sollten Code-Zeilen allgemein nicht mehr als 80 Zeichen
+lang sein. Lange Zeichenketten können allerdings in der nächsten Zeile fortgesetzt
 werden, wenn die vorangehende Zeile mit einem einzelnen Backslash ``\`` als
 Zeile-Fortsetzungs-Zeichen abgeschlossen wird:
 
@@ -271,10 +272,11 @@ verbunden; hinter dem Backslash darf allerdings kein Kommentarzeichen stehen.
 .. _Docstring:
 
 Mehrzeilige Zeichenketten können ebenso in dreifache Anführungszeichen gesetzt
-werden. Solche "Docstrings", um längere Code-Abschnitte, Funktionen, Klassen
-oder Module zu dokumentieren, denn sie bleiben vom Interpreter unbeachtet. Beim
-Schreiben von Docstrings sollten die `offiziellen Empfehlungen
-<https://www.python.org/dev/peps/pep-0257/>`_ beachtet werden.
+werden. Solche "Docstrings" werden beispielsweise verwendet, um längere
+Code-Abschnitte, Funktionen, Klassen oder Module zu dokumentieren, denn sie
+bleiben vom Interpreter unbeachtet. Beim Schreiben von Docstrings sollten die
+`offiziellen Empfehlungen <https://www.python.org/dev/peps/pep-0257/>`_ beachtet
+werden.
 
 Zeichenketten können allgemein folgende Sonderzeichen beinhalten:
 
@@ -1159,7 +1161,7 @@ eines Schlüssels in den eckigen Klammern angegeben wird:
 
 .. index:: View, keys() (dict-Methode), values() (dict-Methode), items() (dict-Methode)
 
-Mittels der `dict``-Funktionen ``keys()``, ``values()`` und ``items()`` lassen
+Mittels der ``dict``-Funktionen ``keys()``, ``values()`` und ``items()`` lassen
 sich so genannte "Views" eines Wörterbuchs erzeugen. Bei einem View handelt es
 sich um eine Listen-Variable, die automatisch aktualisiert wird, wenn das
 zugehörige ``dict`` geändert wird.
@@ -1200,14 +1202,15 @@ man dies verhindern, so kann man folgenden Code nutzen:
     anydict.get(key_1, default=None)
     # Ergebnis: value_1 oder None
 
-Mittels der Funktion ``dict`` können Dictionaries als "Zähler" genutzt
-werden: Soll beispielsweise festgehalten werden, wie häufig einzelne Worte in
-einem Text vorkommen, so legt man zunächst mittels ``wortanzahl = dict()`` ein neues
-``dict`` an; anschließend kann wortweise geprüft werden, ob dieses Wort bereits
-als Schlüssel im ``dict`` enthalten ist. Ist dies der Fall, so wird der
-zugehörige "Counter"-Wert um ``1`` erhöht, andernfalls wird ein neuer Schlüssel
-mit dem Wert ``1`` angelegt. Ist das zu prüfende Wort in der Variable ``wort``
-gespeichert, so genügt für die genannte Aufgabe bereits ein Einzeiler:
+Mittels der ``dict``-Funktion ``get()`` können Dictionaries auch als "Zähler"
+genutzt werden: Soll beispielsweise festgehalten werden, wie häufig einzelne
+Worte in einem Text vorkommen, so legt man zunächst mittels ``wortanzahl =
+dict()`` ein neues ``dict`` an; anschließend kann wortweise geprüft werden, ob
+dieses Wort bereits als Schlüssel im ``dict`` enthalten ist. Ist dies der Fall,
+so wird der zugehörige "Counter"-Wert um ``1`` erhöht, andernfalls wird ein
+neuer Schlüssel mit dem Wert ``1`` angelegt. Ist das zu prüfende Wort in der
+Variable ``wort`` gespeichert, so genügt für die genannte Aufgabe bereits ein
+Einzeiler:
 
 .. code-block:: python
 
@@ -1332,6 +1335,8 @@ Lesen oder Schreiben ein Fehler aufgetreten ist.
 ..  seek moves to a new file position.
 
 .. https://docs.python.org/3/library/io.html
+
+.. TODO Explizite Typumwandlungen
 
 .. raw:: html
 
